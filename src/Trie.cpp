@@ -13,5 +13,5 @@ bool Trie::contains(std::string word) {
 }
 
 bool Trie::containsPrefix(std::string prefix) {
-    return this -> root -> contains(prefix);
+    return this -> root -> containsPrefix(prefix);
 }
