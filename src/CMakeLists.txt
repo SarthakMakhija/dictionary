@@ -1,4 +1,4 @@
-add_library(Dictionary 
+add_library(DictionaryCore 
             Trie.h 
             Trie.cpp 
             TrieNode.h 

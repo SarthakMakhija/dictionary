@@ -22,7 +22,7 @@ enable_testing()
 
 target_link_libraries(dictionary_tests
   	PRIVATE
-    Dictionary
+	DictionaryCore
 	GTest::gtest
 	GTest::gtest_main
 )
