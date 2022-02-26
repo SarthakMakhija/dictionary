@@ -19,7 +19,7 @@ bool TrieNode::contains(std::string word) {
         if (iterator == current -> nodeByCharacter.end()) { 
             return false;
         } 
-        current = current -> nodeByCharacter.find(ch) -> second;
+        current = iterator -> second;
     }
     return current -> endOfWord == true;
 }
@@ -31,7 +31,7 @@ bool TrieNode::containsPrefix(std::string prefix) {
         if (iterator == current -> nodeByCharacter.end()) { 
             return false;
         } 
-        current = current -> nodeByCharacter.find(ch) -> second;
+        current = iterator -> second;
     }
     return true;
 }
