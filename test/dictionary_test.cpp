@@ -2,7 +2,7 @@
 #include "../src/Trie.h"
 
 TEST(Dictionary, ContainsAnAddedWord) {
-    Trie dictionary = new Trie();
+    Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");
 
@@ -10,7 +10,7 @@ TEST(Dictionary, ContainsAnAddedWord) {
 }
 
 TEST(Dictionary, DoesNotContainAWord) {
-    Trie dictionary = new Trie();
+    Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");
 
@@ -18,7 +18,7 @@ TEST(Dictionary, DoesNotContainAWord) {
 }
 
 TEST(Dictionary, ContainsAWordByPrefix) {
-    Trie dictionary = new Trie();
+    Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");
 
@@ -26,7 +26,7 @@ TEST(Dictionary, ContainsAWordByPrefix) {
 }
 
 TEST(Dictionary, DoesNotContainAWordByPrefix) {
-    Trie dictionary = new Trie();
+    Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");
 
