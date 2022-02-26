@@ -1,5 +1,9 @@
 #include "Trie.h"
 
+Trie::Trie() {
+    this -> root = new TrieNode();
+}
+
 void Trie::add(std::string word) {
     this -> root -> add(word);
 }
