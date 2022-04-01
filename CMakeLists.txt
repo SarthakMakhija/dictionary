@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(dictionary)
+project(inmemory_dictionary)
 
 # C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -10,17 +10,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_subdirectory(src/)
 
 # Enable testing
-add_executable(dictionary_tests "")
-target_sources(dictionary_tests
-	PRIVATE	
-	test/dictionary_test.cpp
+add_executable(inmemory_dictionary_tests "")
+target_sources(inmemory_dictionary_tests
+	PRIVATE
+		test/InMemory_dictionary_test.cpp
 )
 
 find_package(GTest CONFIG REQUIRED)
 
 enable_testing()
 
-target_link_libraries(dictionary_tests
+target_link_libraries(inmemory_dictionary_tests
   	PRIVATE
 	DictionaryCore
 	GTest::gtest
@@ -28,6 +28,6 @@ target_link_libraries(dictionary_tests
 )
 
 add_test(
-  	NAME dictionary_tests
-  	COMMAND $<TARGET_FILE:dictionary_tests>
+  	NAME inmemory_dictionary_tests
+  	COMMAND $<TARGET_FILE:inmemory_dictionary_tests>
 )

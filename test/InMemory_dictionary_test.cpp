@@ -1,7 +1,9 @@
 #include <gtest/gtest.h>
 #include "../src/Trie.h"
 
-TEST(Dictionary, ContainsAnAddedWord) {
+using namespace dictionary::inmem;
+
+TEST(InMemoryDictionary, ContainsAnAddedWord) {
     Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");
@@ -9,7 +11,7 @@ TEST(Dictionary, ContainsAnAddedWord) {
     ASSERT_TRUE(dictionary -> contains("memory"));
 }
 
-TEST(Dictionary, DoesNotContainAWord) {
+TEST(InMemoryDictionary, DoesNotContainAWord) {
     Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");
@@ -17,7 +19,7 @@ TEST(Dictionary, DoesNotContainAWord) {
     ASSERT_FALSE(dictionary -> contains("market"));
 }
 
-TEST(Dictionary, ContainsAWordByPrefix) {
+TEST(InMemoryDictionary, ContainsAWordByPrefix) {
     Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");
@@ -25,7 +27,7 @@ TEST(Dictionary, ContainsAWordByPrefix) {
     ASSERT_TRUE(dictionary -> containsPrefix("me"));
 }
 
-TEST(Dictionary, DoesNotContainAWordByPrefix) {
+TEST(InMemoryDictionary, DoesNotContainAWordByPrefix) {
     Trie* dictionary = new Trie();
     dictionary -> add("meet");
     dictionary -> add("memory");

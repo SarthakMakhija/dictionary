@@ -4,14 +4,20 @@
 #include <string>
 #include <map>
 
-class TrieNode {
-    private:
-    bool endOfWord;
-    std::map<char, TrieNode*> nodeByCharacter;
+namespace dictionary {
+    namespace inmem {
+        class TrieNode {
+        private:
+            bool endOfWord;
+            std::map<char, TrieNode *> nodeByCharacter;
 
-    public:
-    void add(std::string word);
-    bool contains(std::string word);
-    bool containsPrefix(std::string prefix);    
-};
+        public:
+            void add(std::string word);
+
+            bool contains(std::string word);
+
+            bool containsPrefix(std::string prefix);
+        };
+    }
+}
 #endif
